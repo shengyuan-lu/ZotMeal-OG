@@ -19,17 +19,21 @@ class BrandyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Load JSON from file
         categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
         
+        // Debug Print
         // print(categoryArray)
 
         foodTableView.dataSource = self
         foodTableView.delegate = self
+        
         view.addSubview(foodTableView)
     }
 
 }
 
+// Table View Methods
 extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,8 +42,8 @@ extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell") as! FoodCell
-        cell.nameLabel.text = categoryArray[indexPath.section].menu[indexPath.row].name
-        cell.desLabel.text = categoryArray[indexPath.section].menu[indexPath.row].description
+        print("sadfasf", categoryArray[indexPath.section].menu[indexPath.row])
+        cell.food = categoryArray[indexPath.section].menu[indexPath.row]
         return cell
     }
     
@@ -58,12 +62,11 @@ extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = UIFont(name: "HelveticaNeue", size: 25)
+        header.textLabel?.textAlignment = .center
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 40
     }
-    
-    
 }
 

@@ -1,0 +1,58 @@
+{
+    "anteatery": [ {
+        "category": "Deli",
+        "menu": [{
+            "name": "Hamburger",
+            "calories": 330,
+            "description": "Beef burger on white hamburger roll",
+            "isEatWell": false,
+            "isVegan": false,
+            "isPlantForward": false,
+            "isVegetarian": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Hot Dog on Roll",
+            "calories": 310,
+            "description": "Grilled hot dog on roll",
+            "isEatWell": false,
+            "isVegan": false,
+            "isPlantForward": false,
+            "isVegetarian": false,
+            "isWholeGrains": false
+        }]
+    },
+    
+    {
+        "category": "Dessert",
+        "menu": [{
+            "name": "Sweet & Sour Chicken Stir-Fry",
+            "calories": 130,
+            "description": "Stir-fried chicken, onion, bell peppers, carrots and pineapple coated with a sweet and sour sauce",
+            "isEatWell": true,
+            "isVegan": false,
+            "isPlantForward": false,
+            "isVegetarian": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Breakfast Quesadilla",
+            "calories": 220,
+            "description": "Golden brown tortilla filled with scrambled eggs, cheddar and sauteed onions and peppers",
+            "isEatWell": false,
+            "isVegan": false,
+            "isPlantForward": false,
+            "isVegetarian": true,
+            "isWholeGrains": false
+        }, {
+            "name": "Scrambled Eggs",
+            "calories": 140,
+            "description": "Freshly scrambled eggs",
+            "isEatWell": false,
+            "isVegan": false,
+            "isPlantForward": false,
+            "isVegetarian": true,
+            "isWholeGrains": false
+        }]
+        
+    } ]
+}
+

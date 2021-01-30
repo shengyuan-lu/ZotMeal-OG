@@ -21,6 +21,7 @@
 		F4CD776A25C5289500788BED /* FoodStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD776925C5289500788BED /* FoodStruct.swift */; };
 		F4CD777125C52C2000788BED /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD777025C52C2000788BED /* FoodCell.swift */; };
 		F4D53C0625C5873D0039F198 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D53C0525C5873D0039F198 /* ResponseData.swift */; };
+		F4F8D50125C627020041F045 /* Ant.json in Resources */ = {isa = PBXBuildFile; fileRef = F4F8D50025C627020041F045 /* Ant.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F4CD776925C5289500788BED /* FoodStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStruct.swift; sourceTree = "<group>"; };
 		F4CD777025C52C2000788BED /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		F4D53C0525C5873D0039F198 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
+		F4F8D50025C627020041F045 /* Ant.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ant.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				F4CD776625C5286A00788BED /* Brandy.json */,
+				F4F8D50025C627020041F045 /* Ant.json */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				F470E58825C507BB0053A578 /* Assets.xcassets in Resources */,
 				F470E58625C507BA0053A578 /* Main.storyboard in Resources */,
 				F4CD776725C5286A00788BED /* Brandy.json in Resources */,
+				F4F8D50125C627020041F045 /* Ant.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
