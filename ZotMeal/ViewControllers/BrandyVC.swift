@@ -14,10 +14,12 @@ class BrandyVC: UIViewController {
     
     // DataStructure
     var foodArray:[Food] = []
+    let model = JsonModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        model.parseLocalJSON(fileName: "Brandy")
     }
 
 }
