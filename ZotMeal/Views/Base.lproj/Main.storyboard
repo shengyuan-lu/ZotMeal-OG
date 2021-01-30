@@ -11,7 +11,6 @@
         <!--Brandywine-->
         <scene sceneID="lce-zv-pRQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hzC-Yb-OaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="dvp-ft-SFm" customClass="BrandyVC" customModule="ZotMeal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Xk-3A-trg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -47,14 +46,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Brandywine" id="hph-Ic-pXw"/>
+                    <connections>
+                        <outlet property="foodTableView" destination="kmm-9U-cbE" id="40n-mq-rec"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzC-Yb-OaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-684.05797101449275" y="1442.4107142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rg4-bX-Avu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hXZ-Yl-xXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="uvj-xu-nB8" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nza-iC-YZw"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z3b-0e-TSM">
@@ -67,6 +69,7 @@
                         <segue destination="DLo-Lw-x0t" kind="relationship" relationship="viewControllers" id="znu-Mn-OOp"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXZ-Yl-xXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="-102"/>
         </scene>
@@ -74,11 +77,15 @@
         <scene sceneID="ZDh-aX-G13">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Cv-uw-LPQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Brandywine" image="map.fill" catalog="system" id="3Ve-za-o4D"/>
+                    <tabBarItem key="tabBarItem" title="Brandywine" image="map.fill" catalog="system" selectedImage="map.fill" id="3Ve-za-o4D"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HgN-yZ-HA3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.16078431372549018" green="0.38431372549019605" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -131,11 +138,15 @@
         <scene sceneID="oAJ-KG-U1P">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DLo-Lw-x0t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Anteatery" id="boH-6i-OMa"/>
+                    <tabBarItem key="tabBarItem" title="Anteatery" image="ant.fill" catalog="system" selectedImage="ant.fill" id="boH-6i-OMa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NVF-vl-EcB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.97647058823529409" green="0.82745098039215681" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -148,6 +159,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ant.fill" catalog="system" width="107" height="128"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
