@@ -13,13 +13,15 @@ class BrandyVC: UIViewController {
     @IBOutlet weak var foodTableView: UITableView!
     
     // DataStructure
-    var foodArray:[Food] = []
+    var categoryArray:[Category] = []
     let model = JsonModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        model.parseLocalJSON(fileName: "Brandy")
+        categoryArray = model.loadJson(filename: "Brandy") ?? []
+        
+        print(categoryArray)
     }
 
 }
@@ -27,7 +29,7 @@ class BrandyVC: UIViewController {
 extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foodArray.count
+        return categoryArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

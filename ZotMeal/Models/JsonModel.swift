@@ -2,66 +2,20 @@ import Foundation
 
 class JsonModel {
     
-    func parseLocalJSON(fileName: String) {
-        
-        if let localData = self.readLocalFile(fileName: fileName) {
-            self.parse(jsonData: localData)
-        }
-        
-    }
-    
-    func parseRemoteJSON(URL: String) {
-        
-        let urlString = URL
-        self.loadJson(fromURLString: urlString) { (result) in
-            switch result {
-            case .success(let data):
-                self.parse(jsonData: data)
-            case .failure(let error):
-                print(error)
+    func loadJson(filename fileName: String) -> [Category]? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(ResponseData.self, from: data)
+                print("jsonData is \(jsonData)")
+                return jsonData.categories
+            } catch {
+                print("error: \(error)")
             }
         }
-    }
-    
-    func readLocalFile(fileName: String) -> Data? {
-        do {
-            if let bundlePath = Bundle.main.path(forResource: fileName, ofType: "JSON"),
-               let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                return jsonData
-            }
-        } catch {
-            print(error)
-        }
-        
+        print("loadJson returns nil")
         return nil
-    }
-    
-    func loadJson(fromURLString urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
-        if let url = URL(string: urlString) {
-            let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    completion(.failure(error))
-                }
-                
-                if let data = data {
-                    completion(.success(data))
-                }
-            }
-            
-            urlSession.resume()
-        }
-    }
-    
-    func parse(jsonData: Data) {
-        do {
-            let decodedData = try JSONDecoder().decode(Category.self, from: jsonData)
-            
-            print("Category: ", decodedData.category!)
-            print("Food: ", decodedData.menu!)
-            print("===================================")
-        } catch {
-            print("decode error")
-        }
     }
     
 }
