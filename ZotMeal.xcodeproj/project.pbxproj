@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,8 +56,45 @@
 				0D312C5CF977982D0582384D /* Pods-ZotMeal.debug.xcconfig */,
 				84E81EF753042E490F83DB10 /* Pods-ZotMeal.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F46FBD9225C50A8C004ACAA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F470E58425C507BA0053A578 /* Main.storyboard */,
+				F470E58925C507BB0053A578 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F46FBD9325C50AA3004ACAA7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F470E58225C507BA0053A578 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F46FBD9525C50AB2004ACAA7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F46FBD9625C50AB9004ACAA7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F46FBD9725C50AEE004ACAA7 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extras;
 			sourceTree = "<group>";
 		};
 		F470E57225C507B90053A578 = {
@@ -83,10 +120,12 @@
 			children = (
 				F470E57E25C507BA0053A578 /* AppDelegate.swift */,
 				F470E58025C507BA0053A578 /* SceneDelegate.swift */,
-				F470E58225C507BA0053A578 /* ViewController.swift */,
-				F470E58425C507BA0053A578 /* Main.storyboard */,
+				F46FBD9525C50AB2004ACAA7 /* Cells */,
+				F46FBD9625C50AB9004ACAA7 /* Models */,
+				F46FBD9225C50A8C004ACAA7 /* Views */,
+				F46FBD9325C50AA3004ACAA7 /* ViewControllers */,
+				F46FBD9725C50AEE004ACAA7 /* Extras */,
 				F470E58725C507BB0053A578 /* Assets.xcassets */,
-				F470E58925C507BB0053A578 /* LaunchScreen.storyboard */,
 				F470E58C25C507BB0053A578 /* Info.plist */,
 			);
 			path = ZotMeal;
