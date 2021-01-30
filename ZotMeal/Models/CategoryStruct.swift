@@ -1,7 +1,7 @@
 import Foundation
 
 struct Category {
-    var category:String
+    var categoryName:String
     var menu: [Food]
 }
 
@@ -9,14 +9,14 @@ struct Category {
 extension Category: Codable {
     
     enum Keys: String, CodingKey {
-        case category = "category"
+        case categoryName = "category"
         case menu = "menu"
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Keys.self)
         
-        self.category = try container.decode(String.self, forKey: .category)
+        self.categoryName = try container.decode(String.self, forKey: .categoryName)
         
         self.menu = try container.decode([Food].self, forKey: .menu)
     }

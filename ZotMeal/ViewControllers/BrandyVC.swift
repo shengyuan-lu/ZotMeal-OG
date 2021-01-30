@@ -19,7 +19,7 @@ class BrandyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryArray = model.loadJson(filename: "Brandy") ?? []
+        categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
         
         print(categoryArray)
     }
