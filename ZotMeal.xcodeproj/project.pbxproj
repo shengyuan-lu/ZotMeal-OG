@@ -102,10 +102,10 @@
 		F46FBD9625C50AB9004ACAA7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F495605C25C5543400330FC4 /* JsonModel.swift */,
 				F4D53C0525C5873D0039F198 /* ResponseData.swift */,
 				F495605F25C554DA00330FC4 /* CategoryStruct.swift */,
 				F4CD776925C5289500788BED /* FoodStruct.swift */,
-				F495605C25C5543400330FC4 /* JsonModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
