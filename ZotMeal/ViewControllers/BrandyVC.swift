@@ -1,22 +1,15 @@
-//
-//  ViewController.swift
-//  ZotMeal
-//
-//  Created by Shengyuan Lu on 1/29/21.
-//
-
 import UIKit
 import AlamofireImage
 import Lottie
 import SkeletonView
 
-class BrandyVC: UIViewController {
+class BrandyVC: UIViewController, JSONProtocol {
     
     // IBOutlet
     @IBOutlet weak var foodTableView: UITableView!
     
     // DataStructure
-    var categoryArray:[Category] = []
+    var categoryArray = [Category]()
     let model = JsonModel()
     let myRefreshControl = UIRefreshControl()
     
@@ -29,6 +22,17 @@ class BrandyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Load JSON from file
+        model.delegate = self
+        model.loadRemoteJSONBrandy()
+        
+        // If unable to retrieve remote
+        if self.categoryArray.count == 0 {
+            categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
+            print("Display Local JSON")
+            print()
+        }
+        
         // StartAnimation
         startAnimation()
         
@@ -38,9 +42,6 @@ class BrandyVC: UIViewController {
         
         myRefreshControl.addTarget(self, action: #selector(getAPIData), for: .valueChanged)
         foodTableView.refreshControl = myRefreshControl
-        
-        // Load JSON from file
-        categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
         
         // Debug Print
         print(categoryArray)
@@ -54,9 +55,20 @@ class BrandyVC: UIViewController {
     }
     
     @objc func getAPIData() {
-        categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
+        model.loadRemoteJSONBrandy()
+        
+        if self.categoryArray.count == 0 {
+            categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
+            print("Display Local JSON")
+            print()
+        }
+        
         self.foodTableView.reloadData()
         self.myRefreshControl.endRefreshing()
+    }
+    
+    func categoryRetrieved(_ category: [Category]) {
+        self.categoryArray = category
     }
 
     
@@ -145,12 +157,12 @@ extension BrandyVC: SkeletonTableViewDataSource {
     // Call animation functions to start
     func startAnimation() {
         
-        animationView = .init(name: "4762-food-carousel")
+        animationView = .init(name: "17100-food")
         
         // 1. Set the size to the frame
         
         // animationView!.frame = view.bounds
-        animationView?.frame = CGRect(x: view.frame.width/2 - 75, y: view.frame.height/2 - 75, width: 150, height: 150)
+        animationView?.frame = CGRect(x: view.frame.width/2 - 125, y: view.frame.height/2 - 125, width: 250, height: 250)
         
         // fit the animation
         animationView!.contentMode = .scaleAspectFit
@@ -160,7 +172,7 @@ extension BrandyVC: SkeletonTableViewDataSource {
         animationView!.loopMode = .loop
         
         // 3. Animation speed - Larger number = false
-        animationView!.animationSpeed = 5
+        animationView!.animationSpeed = 1
         
         // 4. Play animation
         animationView!.play()
