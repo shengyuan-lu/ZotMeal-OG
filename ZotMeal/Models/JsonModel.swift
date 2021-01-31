@@ -16,7 +16,7 @@ class JsonModel {
                 print("error: \(error)")
             }
         }
-        print("Unable to load local JSON, something is wrong")
+        print("loadJson returns nil, something is wrong")
         return nil
     }
     

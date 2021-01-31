@@ -123,8 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				F4CD776625C5286A00788BED /* Brandy.json */,
-				F4D7209F25C66093003C11B4 /* 4762-food-carousel.json */,
 				F4F8D50025C627020041F045 /* Ant.json */,
+				F4D7209F25C66093003C11B4 /* 4762-food-carousel.json */,
 				F4D7208C25C635B9003C11B4 /* Constants.swift */,
 			);
 			path = Extras;

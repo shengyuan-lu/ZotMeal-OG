@@ -1,5 +1,5 @@
 {
-    "anteatery": [{
+    "restaurant": [{
         "category": "Deli",
         "menu": [{
             "name": "Greek Veggie Ciabatta Sandwich",
@@ -201,7 +201,7 @@
             "isWholeGrains": false
         }, {
             "name": "American Cheese",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": false,
             "isVegetarian": false,
@@ -219,7 +219,7 @@
             "isWholeGrains": false
         }, {
             "name": "Grilled Chicken Breast",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": false,
             "isVegetarian": false,
@@ -228,7 +228,7 @@
             "isWholeGrains": false
         }, {
             "name": "Green Leaf Lettuce",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": true,
             "isVegetarian": true,
@@ -237,7 +237,7 @@
             "isWholeGrains": false
         }, {
             "name": "Sliced Red Onions",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": true,
             "isVegetarian": true,
@@ -246,7 +246,7 @@
             "isWholeGrains": false
         }, {
             "name": "Sliced Tomatoes",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": true,
             "isVegetarian": true,
@@ -255,7 +255,7 @@
             "isWholeGrains": false
         }, {
             "name": "Dill Pickle Slices",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": true,
             "isVegetarian": true,
@@ -288,7 +288,7 @@
         "category": "Produce Market",
         "menu": [{
             "name": "Cottage Cheese",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": false,
             "isVegetarian": true,
@@ -297,7 +297,7 @@
             "isWholeGrains": false
         }, {
             "name": "Hard-Cooked Egg",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": false,
             "isVegetarian": true,
@@ -306,7 +306,7 @@
             "isWholeGrains": false
         }, {
             "name": "Strawberry Yogurt",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": false,
             "isVegetarian": false,
@@ -315,7 +315,7 @@
             "isWholeGrains": false
         }, {
             "name": "Vanilla Yogurt",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": false,
             "isVegetarian": false,
@@ -324,7 +324,7 @@
             "isWholeGrains": false
         }, {
             "name": "Honey Granola",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": false,
             "isVegetarian": true,
@@ -333,7 +333,7 @@
             "isWholeGrains": false
         }, {
             "name": "Raisins",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": true,
             "isVegetarian": true,
@@ -342,7 +342,7 @@
             "isWholeGrains": false
         }, {
             "name": "Red Grapes",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": true,
             "isVegetarian": true,
@@ -351,7 +351,7 @@
             "isWholeGrains": false
         }, {
             "name": "Strawberry Cream Cheese",
-            "calories": "N/A",
+            "calories": 0,
             "description": "N/A",
             "isVegan": false,
             "isVegetarian": true,

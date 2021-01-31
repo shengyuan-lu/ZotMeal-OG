@@ -6,7 +6,7 @@ struct ResponseData {
 
 extension ResponseData: Decodable {
     enum Keys: String, CodingKey {
-        case categories = "brandywine"
+        case categories = "restaurant"
     }
     
     init(from decoder: Decoder) throws {
