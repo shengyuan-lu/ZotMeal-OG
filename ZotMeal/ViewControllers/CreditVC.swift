@@ -27,13 +27,14 @@ class CreditVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         CreditTableView.refreshControl = nil
         
+        CreditTableView.isUserInteractionEnabled = false
+        
         CreditTableView.rowHeight = UITableView.automaticDimension
-        CreditTableView.estimatedRowHeight = 225
     }
     
     func initArray() {
         StandfordRejects.append(Genius(name: "Shengyuan Lu", pic: "ShengyuanLu", bio: "I am a Stanford Reject. So I am here to prove that they missed a genius, basically. Yeah I make apps too."))
-        StandfordRejects.append(Genius(name: "Yinghao(Max) Liu", pic: "YinghaoLiu", bio: "UCI class of 2024. Computer science and engineering major. Former founder and co-captain of FIRST robotics team 7760. Web development enthusiast. Photographer. Loves cycling and hiking."))
+        StandfordRejects.append(Genius(name: "Yinghao(Max) Liu", pic: "YinghaoLiu", bio: "UCI class of 2024. Computer science and engineering major. Former founder and co-captain of FIRST robotics team 7760. Web development enthusiast. Photographer."))
         StandfordRejects.append(Genius(name: "Jingqi Yao", pic: "JingqiYao", bio: "UCI class of 2023, CS major. iOS, web dev, machine learning, Kpop dance, coffee… interested in everything except C"))
         roles = ["Developers"]
     }
