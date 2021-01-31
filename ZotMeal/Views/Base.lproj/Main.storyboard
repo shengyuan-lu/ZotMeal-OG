@@ -226,6 +226,9 @@
                                 <segue destination="OwR-Ba-9eH" kind="presentation" id="Zwu-xh-yXr"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Credit" image="person.3.fill" catalog="system" id="5dT-5O-wXp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="foodTableView" destination="kmm-9U-cbE" id="40n-mq-rec"/>
@@ -233,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzC-Yb-OaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-685" y="1570"/>
+            <point key="canvasLocation" x="-380" y="1570"/>
         </scene>
         <!--HoursVC-->
         <scene sceneID="Vq6-XJ-tnh">
@@ -551,6 +554,9 @@
                                 <segue destination="AQl-O6-8ie" kind="presentation" identifier="" id="g4e-mK-CPq"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.3.fill" catalog="system" id="lyt-aN-txS">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="foodTableView" destination="gjo-IU-USG" id="I1W-uf-yb3"/>
@@ -622,6 +628,7 @@
         <image name="ant.fill" catalog="system" width="107" height="128"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
