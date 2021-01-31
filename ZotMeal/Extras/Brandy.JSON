@@ -38,7 +38,7 @@
             "calories": 220,
             "description": "Golden brown tortilla filled with scrambled eggs, cheddar and sauteed onions and peppers",
             "isEatWell": false,
-            "isVegan": false,
+            "isVegan": true,
             "isPlantForward": false,
             "isVegetarian": true,
             "isWholeGrains": false

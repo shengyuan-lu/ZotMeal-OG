@@ -13,19 +13,51 @@ class FoodCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var desTextView: UITextView!
     @IBOutlet weak var calLabel: UILabel!
+    @IBOutlet weak var badgeImageView: UIImageView!
     
     var food:Food! {
         didSet {
             self.nameLabel.text = food.name
-            self.calLabel.text = String(food.calories) + " Cal"
+            self.calLabel.text = String(food.calories) + " Calories"
             self.desTextView.text = food.description
+            
+            while true {
+                if food.isVegan {
+                    self.badgeImageView.image = UIImage(named: "Vegan")
+                    break
+                }
+                
+                if food.isEatWell {
+                    self.badgeImageView.image = UIImage(named: "EatWell")
+                    break
+                }
+                
+                if food.isVegetarian {
+                    self.badgeImageView.image = UIImage(named: "Vegetarian")
+                    break
+                }
+                
+                if food.isWholeGrains {
+                    self.badgeImageView.image = UIImage(named: "WholeGrains")
+                    break
+                }
+                
+                if food.isPlantForward {
+                    self.badgeImageView.image = UIImage(named: "PlantForward")
+                    break
+                }
+                
+                break
+            }
+
         }
     }
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        desTextView.isScrollEnabled = false
+        self.badgeImageView.backgroundColor = .clear
+        self.desTextView.isScrollEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

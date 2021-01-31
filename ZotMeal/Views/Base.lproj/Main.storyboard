@@ -21,10 +21,10 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodCell" id="kWe-Kt-9QA" customClass="FoodCell" customModule="ZotMeal" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="350" height="227"/>
+                                        <rect key="frame" x="20" y="55.333332061767578" width="350" height="238.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kWe-Kt-9QA" id="Jkg-nN-8de">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="227"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="238.33332824707031"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHz-TD-MF1">
@@ -33,9 +33,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKD-Ur-zDg">
-                                                    <rect key="frame" x="15" y="188" width="320" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKD-Ur-zDg">
+                                                    <rect key="frame" x="15" y="188" width="320" height="25.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -63,7 +63,7 @@
                                                 <constraint firstItem="BYP-5g-isF" firstAttribute="top" secondItem="Jkg-nN-8de" secondAttribute="top" constant="15" id="TSN-Ey-sBc"/>
                                                 <constraint firstItem="JHz-TD-MF1" firstAttribute="leading" secondItem="Jkg-nN-8de" secondAttribute="leading" constant="15" id="aiQ-35-IJM"/>
                                                 <constraint firstAttribute="trailing" secondItem="PKD-Ur-zDg" secondAttribute="trailing" constant="15" id="cs6-kg-5xu"/>
-                                                <constraint firstAttribute="bottom" secondItem="PKD-Ur-zDg" secondAttribute="bottom" constant="15" id="f6r-Xo-ZAu"/>
+                                                <constraint firstAttribute="bottom" secondItem="PKD-Ur-zDg" secondAttribute="bottom" constant="25" id="f6r-Xo-ZAu"/>
                                                 <constraint firstAttribute="trailing" secondItem="BYP-5g-isF" secondAttribute="trailing" constant="15" id="ioX-Fn-vyP"/>
                                                 <constraint firstItem="PKD-Ur-zDg" firstAttribute="top" secondItem="6m8-gM-1Ae" secondAttribute="bottom" constant="15" id="jXa-0s-1ei"/>
                                                 <constraint firstItem="PKD-Ur-zDg" firstAttribute="leading" secondItem="Jkg-nN-8de" secondAttribute="leading" constant="15" id="uAD-QY-vfw"/>
@@ -71,6 +71,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="badgeImageView" destination="BYP-5g-isF" id="Gs4-rf-S3h"/>
                                             <outlet property="calLabel" destination="PKD-Ur-zDg" id="dcO-dZ-RWi"/>
                                             <outlet property="desTextView" destination="6m8-gM-1Ae" id="MQa-4B-czP"/>
                                             <outlet property="nameLabel" destination="JHz-TD-MF1" id="gbL-Da-aju"/>
