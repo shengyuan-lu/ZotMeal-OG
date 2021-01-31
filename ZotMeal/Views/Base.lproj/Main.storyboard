@@ -59,6 +59,30 @@
                                             <outlet property="timeLabel" destination="fXe-fo-ogl" id="uLX-Kn-DgA"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HoursEndCell" rowHeight="550" id="b5p-Uv-WNW" customClass="HoursEndCell" customModule="ZotMeal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="82" width="390" height="550"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b5p-Uv-WNW" id="BXC-2x-BV2">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="550"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ynn-kI-wAU">
+                                                    <rect key="frame" x="0.0" y="110" width="390" height="330"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="330" id="Md8-de-VLt"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ynn-kI-wAU" firstAttribute="leading" secondItem="BXC-2x-BV2" secondAttribute="leading" id="CIZ-qR-v0D"/>
+                                                <constraint firstAttribute="bottom" secondItem="ynn-kI-wAU" secondAttribute="bottom" constant="110" id="ETP-Lk-jBj"/>
+                                                <constraint firstAttribute="trailing" secondItem="ynn-kI-wAU" secondAttribute="trailing" id="gIh-6r-ETz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="anteaterImage" destination="ynn-kI-wAU" id="1Qa-ad-CvT"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -199,7 +223,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Hours" id="3b8-Cd-WXd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="OwR-Ba-9eH" kind="presentation" id="3KK-Xr-hv0"/>
+                                <segue destination="OwR-Ba-9eH" kind="presentation" id="Zwu-xh-yXr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -211,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="-685" y="1570"/>
         </scene>
-        <!--View Controller-->
+        <!--HoursVC-->
         <scene sceneID="Vq6-XJ-tnh">
             <objects>
-                <viewController id="YW5-PX-mDy" sceneMemberID="viewController">
+                <viewController id="YW5-PX-mDy" customClass="HoursVC" customModule="ZotMeal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sq0-44-eHr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +248,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="54" id="BpF-V6-Vt2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HoursCell" rowHeight="54" id="BpF-V6-Vt2" customClass="HoursCell" customModule="ZotMeal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="390" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BpF-V6-Vt2" id="P3G-97-4VY">
@@ -237,13 +261,26 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsk-JU-3na">
+                                                    <rect key="frame" x="250" y="11" width="120" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="6po-qe-HDf" secondAttribute="bottom" id="LeI-bH-6jS"/>
+                                                <constraint firstItem="Qsk-JU-3na" firstAttribute="top" secondItem="P3G-97-4VY" secondAttribute="topMargin" id="RVa-IX-yb1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qsk-JU-3na" secondAttribute="bottom" id="VUH-F2-5fs"/>
                                                 <constraint firstItem="6po-qe-HDf" firstAttribute="top" secondItem="P3G-97-4VY" secondAttribute="topMargin" id="oHk-qe-fZI"/>
+                                                <constraint firstItem="Qsk-JU-3na" firstAttribute="trailing" secondItem="P3G-97-4VY" secondAttribute="trailingMargin" id="qqE-AH-S5C"/>
                                                 <constraint firstItem="6po-qe-HDf" firstAttribute="leading" secondItem="P3G-97-4VY" secondAttribute="leadingMargin" id="u4T-aD-Iv2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="6po-qe-HDf" id="ee8-6E-H4w"/>
+                                            <outlet property="timeLabel" destination="Qsk-JU-3na" id="sAf-0N-ijN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -252,6 +289,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="FdA-XP-dPd"/>
+                    <connections>
+                        <outlet property="hoursTableView" destination="As8-9m-4r5" id="W66-68-Zuk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxM-E4-5ky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

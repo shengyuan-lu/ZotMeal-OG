@@ -19,8 +19,6 @@ class HoursVC: UIViewController {
     
     @IBOutlet weak var hoursTableView: UITableView!
     let model = JsonModel()
-    let myRefreshControl = UIRefreshControl()
-    var refresh = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +28,12 @@ class HoursVC: UIViewController {
         hoursTableView.dataSource = self
         hoursTableView.delegate = self
         
-        myRefreshControl.addTarget(self, action: #selector(getAPIData), for: .valueChanged)
-        hoursTableView.refreshControl = myRefreshControl
-    }
-    
-    @objc func getAPIData() {
-        self.hoursTableView.reloadData()
-        self.myRefreshControl.endRefreshing()
+        hoursTableView.refreshControl = nil
+        
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "MM/dd/yyyy E"
+        title = "Hours - \(format.string(from: date))"
     }
     
     func initHourArrays() {
@@ -52,11 +49,12 @@ class HoursVC: UIViewController {
 
 extension HoursVC: UITableViewDelegate, UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isWeekday() {
-            return weekdays.count
+            return weekdays.count + 1
         }
-        return weekends.count
+        return weekends.count + 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,15 +63,29 @@ extension HoursVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HoursCell") as! HoursCell
-        if isWeekday() {
-            cell.nameLabel.text = weekdays[indexPath.row].name
-            cell.timeLabel.text = weekdays[indexPath.row].time
+        if (indexPath.row < 3) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HoursCell") as! HoursCell
+            if isWeekday() {
+                cell.nameLabel.text = weekdays[indexPath.row].name
+                cell.timeLabel.text = weekdays[indexPath.row].time
+            } else {
+                cell.nameLabel.text = weekends[indexPath.row].name
+                cell.timeLabel.text = weekends[indexPath.row].time
+            }
+            return cell
         } else {
-            cell.nameLabel.text = weekends[indexPath.row].name
-            cell.timeLabel.text = weekends[indexPath.row].time
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HoursEndCell") as! HoursEndCell
+            cell.anteaterImage.image = UIImage(named: "EndImage")
+            return cell
         }
-        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (indexPath.row < 3) {
+            return 54
+        } else {
+            return 550
+        }
     }
     
     func isWeekday() -> Bool {
