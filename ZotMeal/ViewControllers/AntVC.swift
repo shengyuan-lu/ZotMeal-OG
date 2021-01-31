@@ -1,16 +1,15 @@
-
 import UIKit
 import AlamofireImage
 import Lottie
 import SkeletonView
 
-class AntVC: UIViewController {
-    
+class AntVC: UIViewController, JSONProtocol {
+
     // IBOutlet
     @IBOutlet weak var foodTableView: UITableView!
     
     // DataStructure
-    var categoryArray:[Category] = []
+    var categoryArray = [Category]()
     let model = JsonModel()
     let myRefreshControl = UIRefreshControl()
     
@@ -23,6 +22,16 @@ class AntVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Load JSON from file
+        model.delegate = self
+        model.loadRemoteJSONAnt()
+        
+        // If unable to retrieve remote
+        if self.categoryArray.count == 0 {
+            categoryArray = self.model.loadLocalJSON(filename: "Ant") ?? []
+            print("Display Local JSON")
+        }
+        
         // StartAnimation
         startAnimation()
         
@@ -33,26 +42,39 @@ class AntVC: UIViewController {
         myRefreshControl.addTarget(self, action: #selector(getAPIData), for: .valueChanged)
         foodTableView.refreshControl = myRefreshControl
         
-        // Load JSON from file
-        categoryArray = model.loadLocalJSON(filename: "Ant") ?? []
-        
         // Debug Print
         print(categoryArray)
         
         // stop animations
-        _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
+        _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [self] timer in
             self.stopAnimation()
             self.refresh = false
+            
             self.foodTableView.reloadData()
         }
     }
     
     @objc func getAPIData() {
-        categoryArray = model.loadLocalJSON(filename: "Ant") ?? []
+        model.loadRemoteJSONAnt()
+        
+        if self.categoryArray.count == 0 {
+            categoryArray = model.loadLocalJSON(filename: "Ant") ?? []
+            print("Display Local JSON")
+        }
+        
         self.foodTableView.reloadData()
         self.myRefreshControl.endRefreshing()
     }
-
+    
+    func categoryRetrieved(_ category: [Category]) {
+        
+        self.categoryArray = category
+    }
+    
+    func error() {
+        popUp()
+        self.myRefreshControl.endRefreshing()
+    }
     
 }
 
@@ -139,6 +161,9 @@ extension AntVC: SkeletonTableViewDataSource {
     // Call animation functions to start
     func startAnimation() {
         
+        self.foodTableView.isScrollEnabled = false
+        self.foodTableView.isUserInteractionEnabled = false
+        
         animationView = .init(name: "4762-food-carousel")
         
         // 1. Set the size to the frame
@@ -154,7 +179,7 @@ extension AntVC: SkeletonTableViewDataSource {
         animationView!.loopMode = .loop
         
         // 3. Animation speed - Larger number = false
-        animationView!.animationSpeed = 5
+        animationView!.animationSpeed = 3
         
         // 4. Play animation
         animationView!.play()
@@ -165,6 +190,10 @@ extension AntVC: SkeletonTableViewDataSource {
     
     // Call animation functions to stop
     @objc func stopAnimation() {
+        
+        self.foodTableView.isScrollEnabled = true
+        self.foodTableView.isUserInteractionEnabled = true
+        
         // 1. Stop Animation
         animationView?.stop()
         
@@ -180,6 +209,23 @@ extension AntVC: SkeletonTableViewDataSource {
         view.hideSkeleton()
     }
     
+}
+
+extension AntVC {
+    func popUp() {
+        // Create new Alert
+        let dialogMessage = UIAlertController(title: "Error", message: "Can not fetch the current menu from server. A sample menu is displayed.", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+         })
+        
+        //Add OK button to a dialog message
+        dialogMessage.addAction(ok)
+        // Present Alert to
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
 }
 
 
