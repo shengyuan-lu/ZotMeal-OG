@@ -1,58 +1,405 @@
 {
-    "anteatery": [ {
+    "anteatery": [{
         "category": "Deli",
         "menu": [{
-            "name": "Hamburger",
-            "calories": 330,
-            "description": "Beef burger on white hamburger roll",
-            "isEatWell": false,
+            "name": "Greek Veggie Ciabatta Sandwich",
+            "calories": 220,
+            "description": "Hummus, baby spinach, tomato, cucumber, feta and green olive spread",
             "isVegan": false,
-            "isPlantForward": false,
-            "isVegetarian": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": true,
             "isWholeGrains": false
         }, {
-            "name": "Hot Dog on Roll",
-            "calories": 310,
-            "description": "Grilled hot dog on roll",
-            "isEatWell": false,
+            "name": "Turkey BLT Wrap",
+            "calories": 490,
+            "description": "Turkey breast, crisp bacon, tomato, iceberg lettuce and mayonnaise in flour tortilla wrap",
             "isVegan": false,
-            "isPlantForward": false,
             "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Signature Chips",
+            "calories": 140,
+            "description": "Crispy potato chips seasoned with a blend of peppers and garlic",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
             "isWholeGrains": false
         }]
-    },
-    
-    {
+    }, {
         "category": "Dessert",
         "menu": [{
-            "name": "Sweet & Sour Chicken Stir-Fry",
-            "calories": 130,
-            "description": "Stir-fried chicken, onion, bell peppers, carrots and pineapple coated with a sweet and sour sauce",
-            "isEatWell": true,
+            "name": "Blueberry Mini Muffin",
+            "calories": 80,
+            "description": "Freshly baked miniature muffin with blueberries",
             "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
             "isPlantForward": false,
-            "isVegetarian": false,
             "isWholeGrains": false
         }, {
-            "name": "Breakfast Quesadilla",
-            "calories": 220,
-            "description": "Golden brown tortilla filled with scrambled eggs, cheddar and sauteed onions and peppers",
-            "isEatWell": false,
+            "name": "Cinnamon-Sugar Donut",
+            "calories": 280,
+            "description": "Freshly baked donut coated with cinnamon sugar",
             "isVegan": false,
-            "isPlantForward": false,
             "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Cherry-Blueberry Crisp",
+            "calories": 170,
+            "description": "Almond and ginger flavored cherry-blueberry compote topped with crunchy spiced oats with almonds and whipped topping",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Oatmeal Raisin Cookie",
+            "calories": 120,
+            "description": "Freshly baked chewy oatmeal cookie with raisins",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Chocolate Pudding Parfait",
+            "calories": 300,
+            "description": "Creamy chocolate pudding layered with whipped topping",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }]
+    }, {
+        "category": "Traditions",
+        "menu": [{
+            "name": "Swedish Meatballs",
+            "calories": 300,
+            "description": "Juicy meatballs simmered in a rich, creamy sauce, served over egg noodles",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
             "isWholeGrains": false
         }, {
             "name": "Scrambled Eggs",
             "calories": 140,
             "description": "Freshly scrambled eggs",
-            "isEatWell": false,
             "isVegan": false,
-            "isPlantForward": false,
             "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "French Toast",
+            "calories": 160,
+            "description": "Golden brown and fluffy cinnamon-spiced thick-cut French toast",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Hash Brown Potato Patty",
+            "calories": 130,
+            "description": "Crispy fried shredded potato patty",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Pork Sausage Links",
+            "calories": 240,
+            "description": "Golden brown savory pork sausage link",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Brown Rice",
+            "calories": 110,
+            "description": "Tender cooked brown rice",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": true,
+            "isPlantForward": true,
+            "isWholeGrains": true
+        }, {
+            "name": "Jasmine Rice",
+            "calories": 130,
+            "description": "Thai long grain rice with aromatic, nutty flavor",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Steamed Broccoli Florets",
+            "calories": 20,
+            "description": "Steamed broccoli florets tossed with garlic and black pepper",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": true,
+            "isPlantForward": true,
             "isWholeGrains": false
         }]
-        
-    } ]
+    }, {
+        "category": "Grill",
+        "menu": [{
+            "name": "Hamburger",
+            "calories": 380,
+            "description": "Grilled quarter pound beef burger on a roll",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Crispy Chicken Sandwich",
+            "calories": 460,
+            "description": "Crispy breaded chicken on a roll",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Hot Dog on Roll",
+            "calories": 310,
+            "description": "Grilled hot dog on roll",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Grilled Cheese Sandwich",
+            "calories": 320,
+            "description": "Classic grilled American cheese sandwich on white bread",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Crispy Shoestring French Fries",
+            "calories": 150,
+            "description": "Piping hot crispy shoestring French fries",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "American Cheese",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Beyond Burger\u00ae Patty",
+            "calories": 290,
+            "description": "N/A",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Grilled Chicken Breast",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Green Leaf Lettuce",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Sliced Red Onions",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Sliced Tomatoes",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Dill Pickle Slices",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }]
+    }, {
+        "category": "Oven",
+        "menu": [{
+            "name": "Classic Cheese Pizza",
+            "calories": 560,
+            "description": "Mozzarella and pizza sauce",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Pepperoni Pizza",
+            "calories": 630,
+            "description": "Pepperoni, mozzarella and pizza sauce",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }]
+    }, {
+        "category": "Produce Market",
+        "menu": [{
+            "name": "Cottage Cheese",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Hard-Cooked Egg",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Strawberry Yogurt",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Vanilla Yogurt",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Honey Granola",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Raisins",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Red Grapes",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Strawberry Cream Cheese",
+            "calories": "N/A",
+            "description": "N/A",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }]
+    }, {
+        "category": "Soups",
+        "menu": [{
+            "name": "Old Fashioned Oatmeal",
+            "calories": 110,
+            "description": "Homestyle oatmeal cereal",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": true
+        }]
+    }, {
+        "category": "Daily Feature",
+        "menu": [{
+            "name": "Tofu-Potato Hash",
+            "calories": 110,
+            "description": "Hearty tofu-potato hash with peppers and onions, served with salsa",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": true,
+            "isWholeGrains": false
+        }, {
+            "name": "Vegan Home-Style Pancakes",
+            "calories": 250,
+            "description": "Warm vegan pancakes made from scratch with soy milk and vanilla",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": false,
+            "isWholeGrains": false
+        }, {
+            "name": "Vegan Blueberry Banana Bread",
+            "calories": 260,
+            "description": "Freshly-baked vegan banana bread with blueberries",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isEatWell": false,
+            "isPlantForward": true,
+            "isWholeGrains": false
+        }]
+    }]
 }
-
