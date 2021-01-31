@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import AlamofireImage
+import Lottie
+import SkeletonView
 
 class BrandyVC: UIViewController {
     
@@ -15,20 +18,44 @@ class BrandyVC: UIViewController {
     // DataStructure
     var categoryArray:[Category] = []
     let model = JsonModel()
+    let myRefreshControl = UIRefreshControl()
+    
+    // Create an animation view
+    var animationView: AnimationView?
+    
+    // This will be used to determine when the tableview is being refreshed
+    var refresh = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // StartAnimation
+        startAnimation()
         
         // Load JSON from file
         categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
         
         // Debug Print
-        // print(categoryArray)
+        print(categoryArray)
         
+        // TableView
         foodTableView.dataSource = self
         foodTableView.delegate = self
+        myRefreshControl.addTarget(self, action: #selector(getAPIData), for: .valueChanged)
+        foodTableView.refreshControl = myRefreshControl
         
         view.addSubview(foodTableView)
+        
+        // stop animations
+        _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
+            self.stopAnimation()
+        }
+    }
+    
+    @objc func getAPIData() {
+        categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
+        self.foodTableView.reloadData()
+        self.myRefreshControl.endRefreshing()
     }
 
     
@@ -43,8 +70,15 @@ extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell") as! FoodCell
-        print("sadfasf", categoryArray[indexPath.section].menu[indexPath.row])
+  
         cell.food = categoryArray[indexPath.section].menu[indexPath.row]
+        
+        if self.refresh {
+            cell.showAnimatedSkeleton()
+        } else {
+            cell.hideSkeleton()
+        }
+        
         return cell
     }
     
@@ -97,5 +131,54 @@ extension BrandyVC {
             print(selectedFood.name)
         }
     }
+}
+
+// Skeleton
+extension BrandyVC: SkeletonTableViewDataSource {
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "FoodCell"
+    }
+    
+    // Call animation functions to start
+    func startAnimation() {
+        
+        animationView = .init(name: "4762-food-carousel")
+        
+        // 1. Set the size to the frame
+        
+        // animationView!.frame = view.bounds
+        animationView?.frame = CGRect(x: view.frame.width/2 - 75, y: view.frame.height/2 - 75, width: 150, height: 150)
+        
+        // fit the animation
+        animationView!.contentMode = .scaleAspectFit
+        view.addSubview(animationView!)
+        
+        // 2. Set animation loop mode
+        animationView!.loopMode = .loop
+        
+        // 3. Animation speed - Larger number = false
+        animationView!.animationSpeed = 5
+        
+        // 4. Play animation
+        animationView!.play()
+        
+    }
+    
+    // Call animation functions to stop
+    @objc func stopAnimation() {
+        // 1. Stop Animation
+        animationView?.stop()
+        
+        // 2. Change the subview to last and remove the current subview
+        view.subviews.last?.removeFromSuperview()
+        
+        // 3. Set skeleton refresh to false
+        refresh = false
+        
+        // 4. Refresh Table View
+        self.foodTableView.reloadData()
+    }
+    
 }
 

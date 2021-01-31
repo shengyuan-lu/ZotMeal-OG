@@ -21,6 +21,10 @@ class FoodCell: UITableViewCell {
             self.calLabel.text = String(food.calories) + " Calories"
             self.desTextView.text = food.description
             
+            if food.description == "N/A" {
+                self.desTextView.text = "No description provided."
+            }
+            
             while true {
                 if food.isVegan {
                     self.badgeImageView.image = UIImage(named: "Vegan")

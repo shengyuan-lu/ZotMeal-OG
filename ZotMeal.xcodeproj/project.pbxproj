@@ -23,6 +23,7 @@
 		F4D53C0625C5873D0039F198 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D53C0525C5873D0039F198 /* ResponseData.swift */; };
 		F4D7208925C63410003C11B4 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7208825C63410003C11B4 /* WebVC.swift */; };
 		F4D7208D25C635B9003C11B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7208C25C635B9003C11B4 /* Constants.swift */; };
+		F4D720A025C66093003C11B4 /* 4762-food-carousel.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D7209F25C66093003C11B4 /* 4762-food-carousel.json */; };
 		F4F8D50125C627020041F045 /* Ant.json in Resources */ = {isa = PBXBuildFile; fileRef = F4F8D50025C627020041F045 /* Ant.json */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		F4D53C0525C5873D0039F198 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		F4D7208825C63410003C11B4 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		F4D7208C25C635B9003C11B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F4D7209F25C66093003C11B4 /* 4762-food-carousel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4762-food-carousel.json"; sourceTree = "<group>"; };
 		F4F8D50025C627020041F045 /* Ant.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ant.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F4CD776625C5286A00788BED /* Brandy.json */,
+				F4D7209F25C66093003C11B4 /* 4762-food-carousel.json */,
 				F4F8D50025C627020041F045 /* Ant.json */,
 				F4D7208C25C635B9003C11B4 /* Constants.swift */,
 			);
@@ -150,9 +153,9 @@
 			children = (
 				F470E57E25C507BA0053A578 /* AppDelegate.swift */,
 				F470E58025C507BA0053A578 /* SceneDelegate.swift */,
+				F46FBD9325C50AA3004ACAA7 /* ViewControllers */,
 				F46FBD9525C50AB2004ACAA7 /* Cells */,
 				F46FBD9625C50AB9004ACAA7 /* Models */,
-				F46FBD9325C50AA3004ACAA7 /* ViewControllers */,
 				F46FBD9225C50A8C004ACAA7 /* Views */,
 				F46FBD9725C50AEE004ACAA7 /* Extras */,
 				F470E58725C507BB0053A578 /* Assets.xcassets */,
@@ -225,6 +228,7 @@
 				F470E58825C507BB0053A578 /* Assets.xcassets in Resources */,
 				F470E58625C507BA0053A578 /* Main.storyboard in Resources */,
 				F4CD776725C5286A00788BED /* Brandy.json in Resources */,
+				F4D720A025C66093003C11B4 /* 4762-food-carousel.json in Resources */,
 				F4F8D50125C627020041F045 /* Ant.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
