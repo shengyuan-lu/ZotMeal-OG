@@ -220,7 +220,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Brandywine" id="hph-Ic-pXw">
-                        <barButtonItem key="leftBarButtonItem" title="Hours" id="3b8-Cd-WXd">
+                        <barButtonItem key="leftBarButtonItem" title="Hours" image="clock.fill" catalog="system" id="3b8-Cd-WXd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="OwR-Ba-9eH" kind="presentation" id="Zwu-xh-yXr"/>
@@ -544,7 +544,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Anteatery" id="eFN-VD-Ttv">
-                        <barButtonItem key="leftBarButtonItem" title="Hours" id="Ech-2m-keU">
+                        <barButtonItem key="leftBarButtonItem" title="Hours" image="clock.fill" catalog="system" id="Ech-2m-keU">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="AQl-O6-8ie" kind="presentation" identifier="" id="g4e-mK-CPq"/>
@@ -619,6 +619,7 @@
     </scenes>
     <resources>
         <image name="ant.fill" catalog="system" width="107" height="128"/>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
