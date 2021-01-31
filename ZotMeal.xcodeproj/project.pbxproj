@@ -21,6 +21,8 @@
 		F4CD776A25C5289500788BED /* FoodStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD776925C5289500788BED /* FoodStruct.swift */; };
 		F4CD777125C52C2000788BED /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD777025C52C2000788BED /* FoodCell.swift */; };
 		F4D53C0625C5873D0039F198 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D53C0525C5873D0039F198 /* ResponseData.swift */; };
+		F4D7208925C63410003C11B4 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7208825C63410003C11B4 /* WebVC.swift */; };
+		F4D7208D25C635B9003C11B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7208C25C635B9003C11B4 /* Constants.swift */; };
 		F4F8D50125C627020041F045 /* Ant.json in Resources */ = {isa = PBXBuildFile; fileRef = F4F8D50025C627020041F045 /* Ant.json */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		F4CD776925C5289500788BED /* FoodStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStruct.swift; sourceTree = "<group>"; };
 		F4CD777025C52C2000788BED /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		F4D53C0525C5873D0039F198 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
+		F4D7208825C63410003C11B4 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		F4D7208C25C635B9003C11B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4F8D50025C627020041F045 /* Ant.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ant.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +93,7 @@
 			children = (
 				F470E58225C507BA0053A578 /* BrandyVC.swift */,
 				F4CD776125C5271600788BED /* AntVC.swift */,
+				F4D7208825C63410003C11B4 /* WebVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			children = (
 				F4CD776625C5286A00788BED /* Brandy.json */,
 				F4F8D50025C627020041F045 /* Ant.json */,
+				F4D7208C25C635B9003C11B4 /* Constants.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -290,12 +296,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F470E58325C507BA0053A578 /* BrandyVC.swift in Sources */,
+				F4D7208D25C635B9003C11B4 /* Constants.swift in Sources */,
 				F4CD777125C52C2000788BED /* FoodCell.swift in Sources */,
 				F495605D25C5543400330FC4 /* JsonModel.swift in Sources */,
 				F470E57F25C507BA0053A578 /* AppDelegate.swift in Sources */,
 				F4D53C0625C5873D0039F198 /* ResponseData.swift in Sources */,
 				F470E58125C507BA0053A578 /* SceneDelegate.swift in Sources */,
 				F4CD776225C5271600788BED /* AntVC.swift in Sources */,
+				F4D7208925C63410003C11B4 /* WebVC.swift in Sources */,
 				F4CD776A25C5289500788BED /* FoodStruct.swift in Sources */,
 				F495606025C554DB00330FC4 /* CategoryStruct.swift in Sources */,
 			);

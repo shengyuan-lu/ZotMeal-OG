@@ -75,6 +75,7 @@
                                             <outlet property="calLabel" destination="PKD-Ur-zDg" id="dcO-dZ-RWi"/>
                                             <outlet property="desTextView" destination="6m8-gM-1Ae" id="MQa-4B-czP"/>
                                             <outlet property="nameLabel" destination="JHz-TD-MF1" id="gbL-Da-aju"/>
+                                            <segue destination="PBe-F8-oGG" kind="presentation" identifier="segueToWeb" trigger="accessoryAction" id="nNt-WJ-Nb1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -108,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzC-Yb-OaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1246.1538461538462" y="1441.7061611374406"/>
+            <point key="canvasLocation" x="-685" y="1553"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Vq6-XJ-tnh">
@@ -124,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxM-E4-5ky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="257" y="1442"/>
+            <point key="canvasLocation" x="1352" y="2115"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rg4-bX-Avu">
@@ -211,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyL-v5-xVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869.2307692307691" y="1441.7061611374406"/>
+            <point key="canvasLocation" x="2622" y="346"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="atX-SQ-voU">
@@ -244,13 +245,45 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="SNx-go-1Lc" kind="relationship" relationship="rootViewController" id="Hcr-ZK-aEv"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5C-gj-0Ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="941" y="676"/>
+        </scene>
+        <!--WebVC-->
+        <scene sceneID="BV7-6J-9u1">
+            <objects>
+                <viewController id="PBe-F8-oGG" customClass="WebVC" customModule="ZotMeal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B0n-ZA-2na">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3L6-RL-qRT">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ISh-In-dcj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3L6-RL-qRT" secondAttribute="bottom" id="8as-xc-Jzk"/>
+                            <constraint firstItem="3L6-RL-qRT" firstAttribute="top" secondItem="ISh-In-dcj" secondAttribute="top" id="8yK-PB-pYX"/>
+                            <constraint firstItem="3L6-RL-qRT" firstAttribute="leading" secondItem="ISh-In-dcj" secondAttribute="leading" id="DBe-Zv-LBy"/>
+                            <constraint firstItem="ISh-In-dcj" firstAttribute="trailing" secondItem="3L6-RL-qRT" secondAttribute="trailing" id="znF-Fw-gmu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tNL-NR-RYM"/>
+                    <connections>
+                        <outlet property="webView" destination="3L6-RL-qRT" id="ZXH-Mv-fUM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8d2-aL-Cqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-686" y="2311"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vQD-u5-8Zo">
@@ -275,7 +308,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lH-wN-Wgk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-448" y="1442"/>
+            <point key="canvasLocation" x="362" y="2115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZZG-X1-25z">

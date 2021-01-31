@@ -49,6 +49,14 @@ class FoodCell: UITableViewCell {
                 
                 break
             }
+            
+            if food.calories <= 250 {
+                calLabel.textColor = .systemGreen
+            } else if food.calories <= 400 {
+                calLabel.textColor = .orange
+            } else if food.calories > 400 {
+                calLabel.textColor = .red
+            }
 
         }
     }

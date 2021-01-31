@@ -12,7 +12,7 @@
             "isWholeGrains": false
         }, {
             "name": "Hot Dog on Roll",
-            "calories": 310,
+            "calories": 1000,
             "description": "Grilled hot dog on roll",
             "isEatWell": false,
             "isVegan": false,
