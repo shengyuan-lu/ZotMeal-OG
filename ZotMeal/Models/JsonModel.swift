@@ -4,6 +4,8 @@ protocol JSONProtocol {
     
     func categoryRetrieved(_ category:[Category])
     
+    func error()
+    
 }
 
 class JsonModel {
@@ -45,6 +47,13 @@ class JsonModel {
         
         // Get a data task object
         let dataTask = session.dataTask(with: url!) { (data:Data?, responese:URLResponse?, error:Error?) in
+            
+            if data == nil {
+                DispatchQueue.main.async {
+                    // Notify the delegate of the parsed objects
+                    self.delegate?.error()
+                }
+            }
             
             // Check that there wasn't an error
             if error == nil && data != nil {
@@ -96,6 +105,13 @@ class JsonModel {
         
         // Get a data task object
         let dataTask = session.dataTask(with: url!) { (data:Data?, responese:URLResponse?, error:Error?) in
+            
+            if data == nil {
+                DispatchQueue.main.async {
+                    // Notify the delegate of the parsed objects
+                    self.delegate?.error()
+                }
+            }
             
             // Check that there wasn't an error
             if error == nil && data != nil {

@@ -26,11 +26,9 @@ class BrandyVC: UIViewController, JSONProtocol {
         model.delegate = self
         model.loadRemoteJSONBrandy()
         
-        // If unable to retrieve remote
         if self.categoryArray.count == 0 {
-            categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
+            categoryArray = self.model.loadLocalJSON(filename: "Brandy") ?? []
             print("Display Local JSON")
-            print()
         }
         
         // StartAnimation
@@ -50,8 +48,11 @@ class BrandyVC: UIViewController, JSONProtocol {
         _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
             self.stopAnimation()
             self.refresh = false
+            
             self.foodTableView.reloadData()
         }
+        
+ 
     }
     
     @objc func getAPIData() {
@@ -61,7 +62,6 @@ class BrandyVC: UIViewController, JSONProtocol {
         if self.categoryArray.count == 0 {
             categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
             print("Display Local JSON")
-            print()
         }
         
         self.foodTableView.reloadData()
@@ -70,6 +70,11 @@ class BrandyVC: UIViewController, JSONProtocol {
     
     func categoryRetrieved(_ category: [Category]) {
         self.categoryArray = category
+    }
+    
+    func error() {
+        popUp()
+        self.myRefreshControl.endRefreshing()
     }
 
     
@@ -158,6 +163,9 @@ extension BrandyVC: SkeletonTableViewDataSource {
     // Call animation functions to start
     func startAnimation() {
         
+        self.foodTableView.isScrollEnabled = false
+        self.foodTableView.isUserInteractionEnabled = false
+        
         animationView = .init(name: "17100-food")
         
         // 1. Set the size to the frame
@@ -184,6 +192,9 @@ extension BrandyVC: SkeletonTableViewDataSource {
     
     // Call animation functions to stop
     @objc func stopAnimation() {
+        self.foodTableView.isScrollEnabled = true
+        self.foodTableView.isUserInteractionEnabled = true
+        
         // 1. Stop Animation
         animationView?.stop()
         
@@ -198,6 +209,22 @@ extension BrandyVC: SkeletonTableViewDataSource {
         
         view.hideSkeleton()
     }
-    
+}
+
+extension BrandyVC {
+    func popUp() {
+        // Create new Alert
+        let dialogMessage = UIAlertController(title: "Error", message: "Can not fetch the current menu from server. A sample menu is displayed.", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+         })
+        
+        //Add OK button to a dialog message
+        dialogMessage.addAction(ok)
+        // Present Alert to
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
 }
 

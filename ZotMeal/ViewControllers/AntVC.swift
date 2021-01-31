@@ -4,7 +4,7 @@ import Lottie
 import SkeletonView
 
 class AntVC: UIViewController, JSONProtocol {
-    
+
     // IBOutlet
     @IBOutlet weak var foodTableView: UITableView!
     
@@ -28,7 +28,7 @@ class AntVC: UIViewController, JSONProtocol {
         
         // If unable to retrieve remote
         if self.categoryArray.count == 0 {
-            categoryArray = model.loadLocalJSON(filename: "Ant") ?? []
+            categoryArray = self.model.loadLocalJSON(filename: "Ant") ?? []
             print("Display Local JSON")
         }
         
@@ -46,9 +46,10 @@ class AntVC: UIViewController, JSONProtocol {
         print(categoryArray)
         
         // stop animations
-        _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
+        _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [self] timer in
             self.stopAnimation()
             self.refresh = false
+            
             self.foodTableView.reloadData()
         }
     }
@@ -66,9 +67,14 @@ class AntVC: UIViewController, JSONProtocol {
     }
     
     func categoryRetrieved(_ category: [Category]) {
+        
         self.categoryArray = category
     }
-
+    
+    func error() {
+        popUp()
+        self.myRefreshControl.endRefreshing()
+    }
     
 }
 
@@ -155,6 +161,9 @@ extension AntVC: SkeletonTableViewDataSource {
     // Call animation functions to start
     func startAnimation() {
         
+        self.foodTableView.isScrollEnabled = false
+        self.foodTableView.isUserInteractionEnabled = false
+        
         animationView = .init(name: "4762-food-carousel")
         
         // 1. Set the size to the frame
@@ -181,6 +190,10 @@ extension AntVC: SkeletonTableViewDataSource {
     
     // Call animation functions to stop
     @objc func stopAnimation() {
+        
+        self.foodTableView.isScrollEnabled = true
+        self.foodTableView.isUserInteractionEnabled = true
+        
         // 1. Stop Animation
         animationView?.stop()
         
@@ -196,6 +209,23 @@ extension AntVC: SkeletonTableViewDataSource {
         view.hideSkeleton()
     }
     
+}
+
+extension AntVC {
+    func popUp() {
+        // Create new Alert
+        let dialogMessage = UIAlertController(title: "Error", message: "Can not fetch the current menu from server. A sample menu is displayed.", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+         })
+        
+        //Add OK button to a dialog message
+        dialogMessage.addAction(ok)
+        // Present Alert to
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
 }
 
 
