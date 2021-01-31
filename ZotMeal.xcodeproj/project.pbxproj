@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D7A43DD58032973FB7580A2 /* Pods_ZotMeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB383C3091AEF14C2EAF65D4 /* Pods_ZotMeal.framework */; };
+		26DE138D25C68F0900D03439 /* HoursCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE138C25C68F0900D03439 /* HoursCell.swift */; };
+		26DE139025C6904400D03439 /* HoursVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE138F25C6904400D03439 /* HoursVC.swift */; };
 		F470E57F25C507BA0053A578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470E57E25C507BA0053A578 /* AppDelegate.swift */; };
 		F470E58125C507BA0053A578 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470E58025C507BA0053A578 /* SceneDelegate.swift */; };
 		F470E58325C507BA0053A578 /* BrandyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470E58225C507BA0053A578 /* BrandyVC.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		0D312C5CF977982D0582384D /* Pods-ZotMeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZotMeal.debug.xcconfig"; path = "Target Support Files/Pods-ZotMeal/Pods-ZotMeal.debug.xcconfig"; sourceTree = "<group>"; };
+		26DE138C25C68F0900D03439 /* HoursCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursCell.swift; sourceTree = "<group>"; };
+		26DE138F25C6904400D03439 /* HoursVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursVC.swift; sourceTree = "<group>"; };
 		84E81EF753042E490F83DB10 /* Pods-ZotMeal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZotMeal.release.xcconfig"; path = "Target Support Files/Pods-ZotMeal/Pods-ZotMeal.release.xcconfig"; sourceTree = "<group>"; };
 		BB383C3091AEF14C2EAF65D4 /* Pods_ZotMeal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZotMeal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F470E57B25C507BA0053A578 /* ZotMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZotMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,7 @@
 				F470E58225C507BA0053A578 /* BrandyVC.swift */,
 				F4CD776125C5271600788BED /* AntVC.swift */,
 				F4D7208825C63410003C11B4 /* WebVC.swift */,
+				26DE138F25C6904400D03439 /* HoursVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				F4CD777025C52C2000788BED /* FoodCell.swift */,
+				26DE138C25C68F0900D03439 /* HoursCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -310,6 +316,8 @@
 				F4D7208925C63410003C11B4 /* WebVC.swift in Sources */,
 				F4CD776A25C5289500788BED /* FoodStruct.swift in Sources */,
 				F495606025C554DB00330FC4 /* CategoryStruct.swift in Sources */,
+				26DE139025C6904400D03439 /* HoursVC.swift in Sources */,
+				26DE138D25C68F0900D03439 /* HoursCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
