@@ -295,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxM-E4-5ky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2393.8461538461538" y="2540.7582938388623"/>
+            <point key="canvasLocation" x="1351" y="2514"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rg4-bX-Avu">
@@ -617,9 +617,6 @@
             <point key="canvasLocation" x="-1552" y="1570"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="WQe-MY-RG6"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="ant.fill" catalog="system" width="107" height="128"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
