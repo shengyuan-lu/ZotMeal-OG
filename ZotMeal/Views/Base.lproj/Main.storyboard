@@ -255,14 +255,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6po-qe-HDf">
-                                                    <rect key="frame" x="20" y="11" width="130" height="32"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6po-qe-HDf">
+                                                    <rect key="frame" x="20.000000000000004" y="11" width="50.333333333333343" height="32"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsk-JU-3na">
-                                                    <rect key="frame" x="250" y="11" width="120" height="32"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsk-JU-3na">
+                                                    <rect key="frame" x="332.33333333333331" y="11" width="37.666666666666686" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -272,6 +272,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="6po-qe-HDf" secondAttribute="bottom" id="LeI-bH-6jS"/>
                                                 <constraint firstItem="Qsk-JU-3na" firstAttribute="top" secondItem="P3G-97-4VY" secondAttribute="topMargin" id="RVa-IX-yb1"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Qsk-JU-3na" secondAttribute="bottom" id="VUH-F2-5fs"/>
+                                                <constraint firstItem="Qsk-JU-3na" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6po-qe-HDf" secondAttribute="trailing" constant="10" id="bFb-VX-yli"/>
                                                 <constraint firstItem="6po-qe-HDf" firstAttribute="top" secondItem="P3G-97-4VY" secondAttribute="topMargin" id="oHk-qe-fZI"/>
                                                 <constraint firstItem="Qsk-JU-3na" firstAttribute="trailing" secondItem="P3G-97-4VY" secondAttribute="trailingMargin" id="qqE-AH-S5C"/>
                                                 <constraint firstItem="6po-qe-HDf" firstAttribute="leading" secondItem="P3G-97-4VY" secondAttribute="leadingMargin" id="u4T-aD-Iv2"/>

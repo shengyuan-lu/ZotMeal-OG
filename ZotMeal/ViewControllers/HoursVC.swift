@@ -32,7 +32,7 @@ class HoursVC: UIViewController {
         
         let date = Date()
         let format = DateFormatter()
-        format.dateFormat = "MM/dd/yyyy E"
+        format.dateFormat = "EEEE, MMM d, yyyy"
         title = "Hours - \(format.string(from: date))"
     }
     
