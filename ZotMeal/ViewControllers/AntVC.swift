@@ -30,7 +30,6 @@ class AntVC: UIViewController, JSONProtocol {
         if self.categoryArray.count == 0 {
             categoryArray = model.loadLocalJSON(filename: "Ant") ?? []
             print("Display Local JSON")
-            print()
         }
         
         // StartAnimation
@@ -60,7 +59,6 @@ class AntVC: UIViewController, JSONProtocol {
         if self.categoryArray.count == 0 {
             categoryArray = model.loadLocalJSON(filename: "Ant") ?? []
             print("Display Local JSON")
-            print()
         }
         
         self.foodTableView.reloadData()

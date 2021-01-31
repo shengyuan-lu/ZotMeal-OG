@@ -55,6 +55,7 @@ class BrandyVC: UIViewController, JSONProtocol {
     }
     
     @objc func getAPIData() {
+        
         model.loadRemoteJSONBrandy()
         
         if self.categoryArray.count == 0 {
