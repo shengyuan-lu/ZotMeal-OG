@@ -8,6 +8,96 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--HoursVC-->
+        <scene sceneID="lS6-1b-TTS">
+            <objects>
+                <viewController id="GhG-U0-NMf" customClass="HoursVC" customModule="ZotMeal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="33I-n1-Muo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="epZ-dp-ZvP">
+                                <rect key="frame" x="167" y="258" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dRg-Sf-glB">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HoursCell" rowHeight="54" id="X8o-jy-Ytj" customClass="HoursCell" customModule="ZotMeal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X8o-jy-Ytj" id="owc-Yt-xHa">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMr-Gb-5SQ">
+                                                    <rect key="frame" x="20" y="11" width="130" height="32"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXe-fo-ogl">
+                                                    <rect key="frame" x="259" y="11" width="111" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NMr-Gb-5SQ" firstAttribute="top" secondItem="owc-Yt-xHa" secondAttribute="topMargin" id="Nd3-P3-Qse"/>
+                                                <constraint firstItem="fXe-fo-ogl" firstAttribute="top" secondItem="owc-Yt-xHa" secondAttribute="topMargin" id="XA3-dQ-i5O"/>
+                                                <constraint firstItem="NMr-Gb-5SQ" firstAttribute="bottom" secondItem="owc-Yt-xHa" secondAttribute="bottomMargin" id="aoG-CM-zVB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fXe-fo-ogl" secondAttribute="trailing" id="ere-nx-As6"/>
+                                                <constraint firstItem="NMr-Gb-5SQ" firstAttribute="leading" secondItem="owc-Yt-xHa" secondAttribute="leadingMargin" id="fMm-br-MVg"/>
+                                                <constraint firstItem="fXe-fo-ogl" firstAttribute="bottom" secondItem="owc-Yt-xHa" secondAttribute="bottomMargin" id="mhQ-46-xPH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="NMr-Gb-5SQ" id="hxH-xF-laS"/>
+                                            <outlet property="timeLabel" destination="fXe-fo-ogl" id="uLX-Kn-DgA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HoursEndCell" rowHeight="550" id="b5p-Uv-WNW" customClass="HoursEndCell" customModule="ZotMeal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="82" width="390" height="550"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b5p-Uv-WNW" id="BXC-2x-BV2">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="550"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ynn-kI-wAU">
+                                                    <rect key="frame" x="0.0" y="110" width="390" height="330"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="330" id="Md8-de-VLt"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ynn-kI-wAU" firstAttribute="leading" secondItem="BXC-2x-BV2" secondAttribute="leading" id="CIZ-qR-v0D"/>
+                                                <constraint firstAttribute="bottom" secondItem="ynn-kI-wAU" secondAttribute="bottom" constant="110" id="ETP-Lk-jBj"/>
+                                                <constraint firstAttribute="trailing" secondItem="ynn-kI-wAU" secondAttribute="trailing" id="gIh-6r-ETz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="anteaterImage" destination="ynn-kI-wAU" id="1Qa-ad-CvT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U1t-mA-rVR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MXp-yp-kee"/>
+                    <connections>
+                        <outlet property="hoursTableView" destination="dRg-Sf-glB" id="1Rf-TS-aRP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bD7-UG-jeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1552.3076923076922" y="2540.7582938388623"/>
+        </scene>
         <!--Brandywine-->
         <scene sceneID="lce-zv-pRQ">
             <objects>
@@ -133,8 +223,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Hours" image="clock.fill" catalog="system" id="3b8-Cd-WXd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="AQl-O6-8ie" kind="presentation" id="WQe-MY-RG6"/>
+                                <segue destination="OwR-Ba-9eH" kind="presentation" id="Zwu-xh-yXr"/>
                             </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Credit" image="person.3.fill" catalog="system" id="5dT-5O-wXp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -143,23 +236,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzC-Yb-OaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-685" y="1553"/>
+            <point key="canvasLocation" x="-380" y="1570"/>
         </scene>
-        <!--View Controller-->
+        <!--HoursVC-->
         <scene sceneID="Vq6-XJ-tnh">
             <objects>
-                <viewController id="YW5-PX-mDy" sceneMemberID="viewController">
+                <viewController id="YW5-PX-mDy" customClass="HoursVC" customModule="ZotMeal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sq0-44-eHr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="As8-9m-4r5">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HoursCell" rowHeight="54" id="BpF-V6-Vt2" customClass="HoursCell" customModule="ZotMeal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BpF-V6-Vt2" id="P3G-97-4VY">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6po-qe-HDf">
+                                                    <rect key="frame" x="20.000000000000004" y="11" width="50.333333333333343" height="32"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsk-JU-3na">
+                                                    <rect key="frame" x="332.33333333333331" y="11" width="37.666666666666686" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6po-qe-HDf" secondAttribute="bottom" id="LeI-bH-6jS"/>
+                                                <constraint firstItem="Qsk-JU-3na" firstAttribute="top" secondItem="P3G-97-4VY" secondAttribute="topMargin" id="RVa-IX-yb1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qsk-JU-3na" secondAttribute="bottom" id="VUH-F2-5fs"/>
+                                                <constraint firstItem="Qsk-JU-3na" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6po-qe-HDf" secondAttribute="trailing" constant="10" id="bFb-VX-yli"/>
+                                                <constraint firstItem="6po-qe-HDf" firstAttribute="top" secondItem="P3G-97-4VY" secondAttribute="topMargin" id="oHk-qe-fZI"/>
+                                                <constraint firstItem="Qsk-JU-3na" firstAttribute="trailing" secondItem="P3G-97-4VY" secondAttribute="trailingMargin" id="qqE-AH-S5C"/>
+                                                <constraint firstItem="6po-qe-HDf" firstAttribute="leading" secondItem="P3G-97-4VY" secondAttribute="leadingMargin" id="u4T-aD-Iv2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="6po-qe-HDf" id="ee8-6E-H4w"/>
+                                            <outlet property="timeLabel" destination="Qsk-JU-3na" id="sAf-0N-ijN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C4c-yN-skS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="FdA-XP-dPd"/>
+                    <connections>
+                        <outlet property="hoursTableView" destination="As8-9m-4r5" id="W66-68-Zuk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxM-E4-5ky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="2541"/>
+            <point key="canvasLocation" x="1351" y="2514"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rg4-bX-Avu">
@@ -269,6 +409,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nl0-fT-ylX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.82352941180000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -283,7 +424,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lH-wN-Wgk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1465" y="1588"/>
+            <point key="canvasLocation" x="2394" y="1570"/>
         </scene>
         <!--Anteatery-->
         <scene sceneID="Fsb-Yq-JvU">
@@ -413,6 +554,9 @@
                                 <segue destination="AQl-O6-8ie" kind="presentation" identifier="" id="g4e-mK-CPq"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.3.fill" catalog="system" id="lyt-aN-txS">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="foodTableView" destination="gjo-IU-USG" id="I1W-uf-yb3"/>
@@ -420,7 +564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEj-Bq-dLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3677" y="1553"/>
+            <point key="canvasLocation" x="3677" y="1570"/>
         </scene>
         <!--WebVC-->
         <scene sceneID="bAP-Bp-Wzi">
@@ -457,14 +601,34 @@
             </objects>
             <point key="canvasLocation" x="3677" y="2541"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AFy-Np-7gB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OwR-Ba-9eH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vT9-WS-76m">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1058823529" green="0.23921568630000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GhG-U0-NMf" kind="relationship" relationship="rootViewController" id="Zuj-eS-A8a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LqQ-lX-hDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1552" y="1570"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="g4e-mK-CPq"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="ant.fill" catalog="system" width="107" height="128"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
