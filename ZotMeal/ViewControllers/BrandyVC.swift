@@ -32,23 +32,24 @@ class BrandyVC: UIViewController {
         // StartAnimation
         startAnimation()
         
+        // TableView
+        foodTableView.dataSource = self
+        foodTableView.delegate = self
+        
+        myRefreshControl.addTarget(self, action: #selector(getAPIData), for: .valueChanged)
+        foodTableView.refreshControl = myRefreshControl
+        
         // Load JSON from file
         categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
         
         // Debug Print
         print(categoryArray)
         
-        // TableView
-        foodTableView.dataSource = self
-        foodTableView.delegate = self
-        myRefreshControl.addTarget(self, action: #selector(getAPIData), for: .valueChanged)
-        foodTableView.refreshControl = myRefreshControl
-        
-        view.addSubview(foodTableView)
-        
         // stop animations
         _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
             self.stopAnimation()
+            self.refresh = false
+            self.foodTableView.reloadData()
         }
     }
     
@@ -99,6 +100,7 @@ extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = UIFont(name: "HelveticaNeue", size: 25)
         header.textLabel?.textAlignment = .center
+        header.textLabel?.numberOfLines = 1
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -163,6 +165,8 @@ extension BrandyVC: SkeletonTableViewDataSource {
         // 4. Play animation
         animationView!.play()
         
+        view.showGradientSkeleton()
+        
     }
     
     // Call animation functions to stop
@@ -178,6 +182,8 @@ extension BrandyVC: SkeletonTableViewDataSource {
         
         // 4. Refresh Table View
         self.foodTableView.reloadData()
+        
+        view.hideSkeleton()
     }
     
 }
