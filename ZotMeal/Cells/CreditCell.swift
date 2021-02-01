@@ -9,14 +9,16 @@ import UIKit
 
 class CreditCell: UITableViewCell {
 
-    @IBOutlet weak var pictureVIew: UIImageView!
+    
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var bioTextView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        pictureVIew.layer.masksToBounds = true
-        pictureVIew.layer.cornerRadius = pictureVIew.bounds.width / 2
+        bioTextView.isScrollEnabled = false
+        profileImageView.layer.masksToBounds = true
+        profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
