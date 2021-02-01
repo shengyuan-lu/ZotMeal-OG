@@ -57,11 +57,6 @@ class AntVC: UIViewController, JSONProtocol {
     @objc func getAPIData() {
         model.loadRemoteJSONAnt()
         
-        if self.categoryArray.count == 0 {
-            categoryArray = model.loadLocalJSON(filename: "Ant") ?? []
-            print("Display Local JSON")
-        }
-        
         self.foodTableView.reloadData()
         self.myRefreshControl.endRefreshing()
     }

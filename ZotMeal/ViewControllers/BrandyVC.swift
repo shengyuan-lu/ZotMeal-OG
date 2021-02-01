@@ -59,11 +59,6 @@ class BrandyVC: UIViewController, JSONProtocol {
         
         model.loadRemoteJSONBrandy()
         
-        if self.categoryArray.count == 0 {
-            categoryArray = model.loadLocalJSON(filename: "Brandy") ?? []
-            print("Display Local JSON")
-        }
-        
         self.foodTableView.reloadData()
         self.myRefreshControl.endRefreshing()
     }

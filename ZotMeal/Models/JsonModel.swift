@@ -50,7 +50,7 @@ class JsonModel {
             
             if data == nil {
                 DispatchQueue.main.async {
-                    // Notify the delegate of the parsed objects
+                    // Notify the delegate of the error
                     self.delegate?.error()
                 }
             }
@@ -76,6 +76,12 @@ class JsonModel {
                     
                     
                 } catch  {
+                    
+                    DispatchQueue.main.async {
+                        // Notify the delegate of the error
+                        self.delegate?.error()
+                    }
+                    
                     print("Couldn't parse JSON")
                 }
                 
@@ -108,7 +114,7 @@ class JsonModel {
             
             if data == nil {
                 DispatchQueue.main.async {
-                    // Notify the delegate of the parsed objects
+                    // Notify the delegate of the error
                     self.delegate?.error()
                 }
             }
@@ -134,6 +140,11 @@ class JsonModel {
                     
                     
                 } catch  {
+                    DispatchQueue.main.async {
+                        // Notify the delegate of the error
+                        self.delegate?.error()
+                    }
+                    
                     print("Couldn't parse JSON")
                 }
                 
