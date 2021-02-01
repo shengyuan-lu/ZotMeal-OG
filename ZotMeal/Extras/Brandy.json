@@ -2,9 +2,9 @@
     "restaurant": [{
         "category": "Ember/Grill",
         "menu": [{
-            "name": "Hamburger",
+            "name": "Beijing Roast Duck",
             "calories": 330,
-            "description": "Beef burger on white hamburger roll",
+            "description": "Roast duck is a traditional Chinese dish found in Beijing",
             "isVegan": false,
             "isVegetarian": false,
             "isEatWell": false,

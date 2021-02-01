@@ -2,9 +2,9 @@
     "restaurant": [{
         "category": "Deli",
         "menu": [{
-            "name": "Greek Veggie Ciabatta Sandwich",
+            "name": "Crab legs",
             "calories": 220,
-            "description": "Hummus, baby spinach, tomato, cucumber, feta and green olive spread",
+            "description": "Delicious crab legs from Canada",
             "isVegan": false,
             "isVegetarian": true,
             "isEatWell": false,

@@ -24,7 +24,7 @@ class AntVC: UIViewController, JSONProtocol {
         
         // Load JSON from file
         model.delegate = self
-        model.loadRemoteJSONAnt()
+        model.loadRemoteJSON(fromURL: Constants.anteateryURL)
         
         // If unable to retrieve remote
         if self.categoryArray.count == 0 {
@@ -55,7 +55,7 @@ class AntVC: UIViewController, JSONProtocol {
     }
     
     @objc func getAPIData() {
-        model.loadRemoteJSONAnt()
+        model.loadRemoteJSON(fromURL: Constants.anteateryURL)
         
         self.foodTableView.reloadData()
         self.myRefreshControl.endRefreshing()

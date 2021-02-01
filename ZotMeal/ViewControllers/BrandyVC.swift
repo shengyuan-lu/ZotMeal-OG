@@ -24,7 +24,7 @@ class BrandyVC: UIViewController, JSONProtocol {
         
         // Load JSON from file
         model.delegate = self
-        model.loadRemoteJSONBrandy()
+        model.loadRemoteJSON(fromURL: Constants.brandyURL)
         
         if self.categoryArray.count == 0 {
             categoryArray = self.model.loadLocalJSON(filename: "Brandy") ?? []
@@ -57,7 +57,7 @@ class BrandyVC: UIViewController, JSONProtocol {
     
     @objc func getAPIData() {
         
-        model.loadRemoteJSONBrandy()
+        model.loadRemoteJSON(fromURL: Constants.brandyURL)
         
         self.foodTableView.reloadData()
         self.myRefreshControl.endRefreshing()
