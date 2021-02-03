@@ -10,13 +10,15 @@ import UIKit
 class CreditVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     struct Genius {
-        var name, pic, bio: String
+        var name: String
+        var pic: String
+        var bio: String
     }
     
-    var StandfordRejects: Array<Genius> = []
+    var standfordRejects: Array<Genius> = []
     var roles: Array<String> = []
 
-    @IBOutlet weak var CreditTableView: UITableView!
+    @IBOutlet weak var creditTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +27,19 @@ class CreditVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func configTableView() {
-        CreditTableView.dataSource = self
-        CreditTableView.delegate = self
-        
-        CreditTableView.refreshControl = nil
-        CreditTableView.isUserInteractionEnabled = true
-        CreditTableView.isScrollEnabled = true
-        CreditTableView.allowsSelection = false
+        creditTableView.dataSource = self
+        creditTableView.delegate = self
+
+        creditTableView.refreshControl = nil
+        creditTableView.isUserInteractionEnabled = true
+        creditTableView.isScrollEnabled = true
+        creditTableView.allowsSelection = false
     }
     
     func initArray() {
-        StandfordRejects.append(Genius(name: "Shengyuan Lu", pic: "ShengyuanLu", bio: "I am a Stanford reject. So I am here to prove that they missed a genius. Yeah, I make apps too."))
-        StandfordRejects.append(Genius(name: "Yinghao(Max) Liu", pic: "YinghaoLiu", bio: "UCI class of 2024. Computer science and engineering major. Former founder and co-captain of FIRST robotics team 7760. Web development enthusiast. Photographer."))
-        StandfordRejects.append(Genius(name: "Jingqi Yao", pic: "JingqiYao", bio: "UCI class of 2023, CS major. iOS, web dev, machine learning, Kpop dance, coffee… interested in everything except C"))
+        standfordRejects.append(Genius(name: "Shengyuan Lu", pic: "ShengyuanLu", bio: "I am a Stanford reject. So I am here to prove that they missed a genius. Yeah, I make apps too."))
+        standfordRejects.append(Genius(name: "Yinghao(Max) Liu", pic: "YinghaoLiu", bio: "UCI class of 2024. Computer science and engineering major. Former founder and co-captain of FIRST robotics team 7760. Web development enthusiast. Photographer."))
+        standfordRejects.append(Genius(name: "Jingqi Yao", pic: "JingqiYao", bio: "UCI class of 2023, CS major. iOS, web dev, machine learning, Kpop dance, coffee… interested in everything except C"))
         roles = ["Developers"]
     }
 
@@ -48,14 +50,14 @@ class CreditVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return StandfordRejects.count
+        return standfordRejects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CreditCell") as! CreditCell
-        cell.nameLabel.text = StandfordRejects[indexPath.row].name
-        cell.bioTextView.text = StandfordRejects[indexPath.row].bio
-        cell.profileImageView.image = UIImage(named: StandfordRejects[indexPath.row].pic)
+        cell.nameLabel.text = standfordRejects[indexPath.row].name
+        cell.bioTextView.text = standfordRejects[indexPath.row].bio
+        cell.profileImageView.image = UIImage(named: standfordRejects[indexPath.row].pic)
         return cell
     }
     

@@ -313,7 +313,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="About ZotMeal" id="mgf-zz-xA3"/>
                     <connections>
-                        <outlet property="CreditTableView" destination="Ios-57-Ksh" id="8bN-Lx-M0h"/>
+                        <outlet property="creditTableView" destination="Ios-57-Ksh" id="Wd4-ed-OUc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7H-0A-dWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
