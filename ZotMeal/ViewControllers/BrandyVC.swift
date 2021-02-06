@@ -138,7 +138,15 @@ extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
                                for: .normal)
         
         // 3
-        sectionButton.backgroundColor = .systemBlue
+        sectionButton.backgroundColor = .gray
+        sectionButton.layer.cornerRadius = 8
+        sectionButton.layer.borderWidth = 1
+        sectionButton.layer.borderColor = UIColor.gray.cgColor
+        
+        //button text
+        sectionButton.contentHorizontalAlignment = .left
+        
+
         
         // 4
         sectionButton.tag = section
