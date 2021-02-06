@@ -14,6 +14,7 @@ class FoodCell: UITableViewCell {
     @IBOutlet weak var desTextView: UITextView!
     @IBOutlet weak var calLabel: UILabel!
     @IBOutlet weak var badgeImageView: UIImageView!
+    @IBOutlet weak var foodCellBGView: UIView!
     
     var food:Food! {
         didSet {
@@ -70,6 +71,7 @@ class FoodCell: UITableViewCell {
         super.awakeFromNib()
         self.badgeImageView.backgroundColor = .clear
         self.desTextView.isScrollEnabled = false
+        self.foodCellBGView.layer.cornerRadius = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
