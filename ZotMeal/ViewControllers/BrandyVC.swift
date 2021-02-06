@@ -10,6 +10,7 @@ class BrandyVC: UIViewController, JSONProtocol {
     
     // DataStructure
     var categoryArray = [Category]()
+    var hiddenSections = Set<Int>()
     let model = JsonModel()
     let myRefreshControl = UIRefreshControl()
     
@@ -51,7 +52,6 @@ class BrandyVC: UIViewController, JSONProtocol {
             
             self.foodTableView.reloadData()
         }
-        
  
     }
     
@@ -61,10 +61,16 @@ class BrandyVC: UIViewController, JSONProtocol {
         
         self.foodTableView.reloadData()
         self.myRefreshControl.endRefreshing()
+
     }
     
     func categoryRetrieved(_ category: [Category]) {
         self.categoryArray = category
+        
+        // collapse all categories
+        for row in 0..<self.categoryArray.count {
+            self.hiddenSections.insert(row)
+        }
     }
     
     func error() {
@@ -79,6 +85,9 @@ class BrandyVC: UIViewController, JSONProtocol {
 extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.hiddenSections.contains(section) {
+            return 0
+        }
         return categoryArray[section].menu.count
     }
     
@@ -105,19 +114,66 @@ extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
         return categoryArray.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return categoryArray[section].categoryName
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return categoryArray[section].categoryName
+//    }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.font = UIFont(name: "HelveticaNeue", size: 25)
-        header.textLabel?.textAlignment = .center
-        header.textLabel?.numberOfLines = 1
-    }
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        let header = view as! UITableViewHeaderFooterView
+//        header.textLabel?.font = UIFont(name: "HelveticaNeue", size: 25)
+//        header.textLabel?.textAlignment = .center
+//        header.textLabel?.numberOfLines = 1
+//    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        // 1
+        let sectionButton = UIButton()
+        
+        // 2
+        sectionButton.setTitle(categoryArray[section].categoryName,
+                               for: .normal)
+        
+        // 3
+        sectionButton.backgroundColor = .systemBlue
+        
+        // 4
+        sectionButton.tag = section
+        
+        // 5
+        sectionButton.addTarget(self,
+                                action: #selector(self.hideSection(sender:)),
+                                for: .touchUpInside)
+
+        return sectionButton
+    }
+    
+    @objc
+    private func hideSection(sender: UIButton) {
+        let section = sender.tag
+        func indexPathsForSection() -> [IndexPath] {
+            var indexPaths = [IndexPath]()
+            
+            for row in 0..<self.categoryArray[section].menu.count {
+                indexPaths.append(IndexPath(row: row,
+                                            section: section))
+            }
+            
+            return indexPaths
+        }
+        
+        if self.hiddenSections.contains(section) {
+            self.hiddenSections.remove(section)
+            self.foodTableView.insertRows(at: indexPathsForSection(),
+                                      with: .fade)
+        } else {
+            self.hiddenSections.insert(section)
+            self.foodTableView.deleteRows(at: indexPathsForSection(),
+                                      with: .fade)
+        }
     }
     
     
