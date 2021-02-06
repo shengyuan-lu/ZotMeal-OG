@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="kmm-9U-cbE">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <rect key="frame" x="0.0" y="118" width="390" height="726"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -219,7 +219,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kmm-9U-cbE" secondAttribute="trailing" id="Ub6-Bu-SBL"/>
                             <constraint firstItem="kmm-9U-cbE" firstAttribute="leading" secondItem="7Xk-3A-trg" secondAttribute="leading" id="VUd-jb-nCg"/>
-                            <constraint firstItem="kmm-9U-cbE" firstAttribute="top" secondItem="7Xk-3A-trg" secondAttribute="top" id="ey5-gb-1tM"/>
+                            <constraint firstItem="kmm-9U-cbE" firstAttribute="top" secondItem="fmt-sc-rOr" secondAttribute="top" constant="30" id="ey5-gb-1tM"/>
                             <constraint firstAttribute="bottom" secondItem="kmm-9U-cbE" secondAttribute="bottom" id="uuU-W2-Efo"/>
                         </constraints>
                     </view>

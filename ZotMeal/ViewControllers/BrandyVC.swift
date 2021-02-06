@@ -43,7 +43,7 @@ class BrandyVC: UIViewController, JSONProtocol {
         foodTableView.refreshControl = myRefreshControl
         
         // Debug Print
-        print(categoryArray)
+        // print(categoryArray)
         
         // stop animations
         _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
@@ -151,7 +151,7 @@ extension BrandyVC: UITableViewDelegate, UITableViewDataSource {
         
         // 3
         sectionButton.backgroundColor = .gray
-        sectionButton.layer.cornerRadius = 20
+        sectionButton.layer.cornerRadius = 10
         sectionButton.layer.borderWidth = 1
         sectionButton.layer.borderColor = UIColor.gray.cgColor
         
