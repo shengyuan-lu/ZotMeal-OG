@@ -9,17 +9,22 @@ ZotMeal obtains a daily menu from the web and then displays it in a friendly use
 ## How we built it
 The project is comprised of two major components:
 
-## IOS App Development: Multiple view controllers are used to manage the interactions between the user interface and the underlying data. JSON protocol is used to parse incoming raw data. We used Sketch for design-related tasks, such as making the app icon.
-Web Data Management: A Python script is used to scrape data from the web. The data is stored in a private server and then transferred to the app interface via a customized API.
-Challenges we ran into
+## IOS App Development: 
+Multiple view controllers are used to manage the interactions between the user interface and the underlying data. JSON protocol is used to parse incoming raw data. We used Sketch for design-related tasks, such as making the app icon.
+
+## Web Data Management: 
+A Python script is used to scrape data from the web. The data is stored in a private server and then transferred to the app interface via a customized API.
+
+## Challenges we ran into
 Figuring out a proper data management mechanism on a third party server that can automatically update the menu information then storing it in the cloud.
-Integrating more detailed information about the meal itself.
-Loading app data when the user is offline.
-Accompaniments that we’re proud of
+Integrating more detailed information about the meal itself. Loading app data when the user is offline.
+
+## Accompaniments that we’re proud of
 The app is able to acquire live information from the private server then update the menu.
 Animation is integrated into the user interface for a better UX experience.
 Google search is implemented to familiarize the users with the dining options.
-What we learned
+
+## What we learned
 The team experimented with multiple methods to implement the data transmission from the back end to the iOS app. During this process, we honed our programming and development skills. Web scraping techniques are significant in this project and cloud data management became crucial in connecting the web application to the IOS environment.
 
 ## What’s next for ZotMeal
