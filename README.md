@@ -25,6 +25,7 @@ The team experimented with multiple methods to implement the data transmission f
 ## What’s next for ZotMeal
 We aim to add more user-friendly features, such as notifications and widgets. Data management will be transferred from the current private server to Google Cloud Computing Platform for dynamic updating and better data security.
 
+## Time Spent
 Time spent: **24** hours spent in total
 
 ## User Stories
