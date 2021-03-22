@@ -46,4 +46,4 @@ Time spent: **24** hours spent in total
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/i0f7Lgi.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/i0f7Lgi.gif' width=500 />
