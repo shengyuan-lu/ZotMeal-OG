@@ -1,5 +1,22 @@
 # ZotMeal - Version 1.0
 
+## Time Spent
+Time spent: **24** hours spent in total
+
+## User Stories
+
+- [x] User can receive a list of menus from the Web API.
+- [x] User can pull to refresh.
+- [x] When the API connection failed, a sample menu is displayed.
+- [x] The app covers both Brandywine and Anteatery menus.
+- [x] User can get dining hall hours from the app.
+- [x] User can tap on a food cell and get a custom google search about the food.
+
+## Video Walkthrough
+Here's a walkthrough of implemented user stories:
+
+<img src='https://i.imgur.com/i0f7Lgi.gif' width=500 />
+
 ## Inspiration
 UCI has two main dining halls that withstand a huge volume of student capacity. However, the dining hall service adopts a rather traditional method for its communication with students: a website. We decided to facilitate this process by integrating the web information from the dining hall website into an app: ZotMeal, and supply additional features to further optimize the user experience.
 
@@ -9,7 +26,7 @@ ZotMeal obtains a daily menu from the web and then displays it in a friendly use
 ## How we built it
 The project is comprised of two major components:
 
-## IOS App Development: 
+## iOS App Development: 
 Multiple view controllers are used to manage the interactions between the user interface and the underlying data. JSON protocol is used to parse incoming raw data. We used Sketch for design-related tasks, such as making the app icon.
 
 ## Web Data Management: 
@@ -29,21 +46,3 @@ The team experimented with multiple methods to implement the data transmission f
 
 ## What’s next for ZotMeal
 We aim to add more user-friendly features, such as notifications and widgets. Data management will be transferred from the current private server to Google Cloud Computing Platform for dynamic updating and better data security.
-
-## Time Spent
-Time spent: **24** hours spent in total
-
-## User Stories
-
-- [x] User can receive a list of menus from the Web API.
-- [x] User can pull to refresh.
-- [x] When the API connection failed, a sample menu is displayed.
-- [x] The app covers both Brandywine and Anteatery menus.
-- [x] User can get dining hall hours from the app.
-- [x] User can tap on a food cell and get a custom google search about the food.
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-<img src='https://i.imgur.com/i0f7Lgi.gif' width=500 />
