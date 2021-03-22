@@ -1,8 +1,5 @@
 # ZotMeal - Version 1.0
 
-## Time Spent
-Time spent: **24** hours spent in total
-
 ## User Stories
 
 - [x] User can receive a list of menus from the Web API.
