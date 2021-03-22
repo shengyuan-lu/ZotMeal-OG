@@ -12,7 +12,7 @@
 ## Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/i0f7Lgi.gif' width=500 />
+<img src='https://i.imgur.com/i0f7Lgi.gif' width=750 />
 
 ## Inspiration
 UCI has two main dining halls that withstand a huge volume of student capacity. However, the dining hall service adopts a rather traditional method for its communication with students: a website. We decided to facilitate this process by integrating the web information from the dining hall website into an app: ZotMeal, and supply additional features to further optimize the user experience.
