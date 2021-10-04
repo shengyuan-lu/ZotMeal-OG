@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uvj-xu-nB8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uvj-xu-nB8">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +22,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HoursCell" rowHeight="54" id="X8o-jy-Ytj" customClass="HoursCell" customModule="ZotMeal" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="54"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X8o-jy-Ytj" id="owc-Yt-xHa">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="54"/>
@@ -55,7 +56,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HoursEndCell" rowHeight="550" id="b5p-Uv-WNW" customClass="HoursEndCell" customModule="ZotMeal" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="82" width="390" height="550"/>
+                                        <rect key="frame" x="0.0" y="98.666666030883789" width="390" height="550"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b5p-Uv-WNW" id="BXC-2x-BV2">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="550"/>
@@ -112,7 +113,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodCell" id="kWe-Kt-9QA" customClass="FoodCell" customModule="ZotMeal" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="350" height="207"/>
+                                        <rect key="frame" x="20" y="49" width="350" height="207"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kWe-Kt-9QA" id="Jkg-nN-8de">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="207"/>
@@ -223,13 +224,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Brandywine" id="hph-Ic-pXw">
                         <barButtonItem key="leftBarButtonItem" title="Hours" image="clock.fill" catalog="system" id="3b8-Cd-WXd">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="OwR-Ba-9eH" kind="presentation" id="Zwu-xh-yXr"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Credit" image="person.3.fill" catalog="system" id="5dT-5O-wXp">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="s2q-SK-xDO" kind="presentation" id="8eH-N8-5iK"/>
                             </connections>
@@ -257,7 +256,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CreditCell" rowHeight="200" id="gkF-ng-Q35" customClass="CreditCell" customModule="ZotMeal" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="200"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gkF-ng-Q35" id="8K2-sC-mZq">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
@@ -333,7 +332,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HoursCell" rowHeight="54" id="BpF-V6-Vt2" customClass="HoursCell" customModule="ZotMeal" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="54"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BpF-V6-Vt2" id="P3G-97-4VY">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="54"/>
@@ -368,7 +367,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HoursEndCell" rowHeight="550" id="p7V-xc-kbn" customClass="HoursEndCell" customModule="ZotMeal" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="82" width="390" height="550"/>
+                                        <rect key="frame" x="0.0" y="98.666666030883789" width="390" height="550"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p7V-xc-kbn" id="mRb-43-2NV">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="550"/>
@@ -440,10 +439,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HgN-yZ-HA3">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.10588235294117647" green="0.23921568627450979" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -463,10 +458,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NVF-vl-EcB">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.97647058823529409" green="0.82745098039215681" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -550,7 +541,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodCell" id="xma-vi-rKn" customClass="FoodCell" customModule="ZotMeal" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="350" height="215.66667175292969"/>
+                                        <rect key="frame" x="20" y="49" width="350" height="215.66667175292969"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xma-vi-rKn" id="KA8-qA-uLp">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="215.66667175292969"/>
@@ -660,13 +651,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Anteatery" id="eFN-VD-Ttv">
                         <barButtonItem key="leftBarButtonItem" title="Hours" image="clock.fill" catalog="system" id="Ech-2m-keU">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="AQl-O6-8ie" kind="presentation" identifier="" id="g4e-mK-CPq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.3.fill" catalog="system" id="lyt-aN-txS">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="s2q-SK-xDO" kind="presentation" id="9Ml-iu-f1x"/>
                             </connections>
